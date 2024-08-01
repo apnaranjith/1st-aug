@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        num=prompt("Enter a number:");
+count=0;
+min=null;
+for(i of num){
+    if(i>1){
+        for(j=2;j<i;j++){
+            if(i%j==0){
+                count+=1;
+            }
+            if(count>0){
+                break;
+            }
+        }
+     if(count==0){
+         if(min==null){
+             min=i;
+         }
+         else{
+             if(i<min){
+                 min=i;
+             }
+         }
+     }    
+    }
+}
+console.log(min+" is the minimum prime digit in the given number");
+    </script>
+</body>
+</html>
